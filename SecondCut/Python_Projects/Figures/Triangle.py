@@ -7,5 +7,5 @@ class RightTriangle:
         return (self.base * self.height) / 2
     
     def Perimeter(self):
-        self.hypotenuse = (self.base ** 2 + self.height) ** 0.5
+        self.hypotenuse = (self.base ** 2 + self.height ** 2) ** 0.5
         return self.hypotenuse + self.base + self.height
