@@ -2,15 +2,25 @@ package test;
 
 import abstracta.*;
 
-public class TestAbstracta {
-    public static void main(String[] args) {
-       FiguraGeometrica figura = new Rectangulo("Rectangulo1");
-       
-       //System.out.println(figura);
-       figura.dibujar();
-       
-       figura = new Cuadrado("Cuadrado1");
-       figura.dibujar();
-       
+import java.util.Scanner;
+
+public class TestAbstracta{
+    public static void main(String[] args)
+    {
+        String colorDelCuadrado;
+        double ladoDelCuadrado;
+
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.print("Introduzca el color del cuadrado: ");
+        colorDelCuadrado = teclado.nextLine();
+
+        System.out.print("Introduzca el lado del cuadrado: ");
+        ladoDelCuadrado = teclado.nextDouble();
+
+  
+		Cuadrado cuadrado1 = new Cuadrado(colorDelCuadrado, ladoDelCuadrado);
+
+        System.out.printf("El área del cuadrado %s es: %f\n", cuadrado1.getColor(), cuadrado1.calcularArea());
     }
 }
