@@ -1,13 +1,18 @@
 package abstracta;
 
-public class Rectangulo extends FiguraGeometrica {
+public class Triangulo extends FiguraGeometrica{
+    private double base;
+    private double altura;
 
-    public Rectangulo(String tipoFigura) {
-        super(tipoFigura);
+    public Triangulo(String color, double base, double altura)
+    {
+        super(color);
+        this.base = base;
+        this.altura = altura;
     }
-    
-    @Override
-    public void dibujar(){
-        System.out.println("Se dibuja un:" + this.getClass().getSimpleName());
+
+    public double calcularArea()
+    {
+        return (base * altura) / 2;
     }
 }
