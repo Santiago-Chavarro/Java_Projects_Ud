@@ -1,30 +1,16 @@
 package abstracta;
 
-public abstract class FiguraGeometrica{
-    protected String tipoFigura;
-    
-    protected FiguraGeometrica(String tipoFigura){
-      this.tipoFigura = tipoFigura;
-    }
+public abstract class FiguraGeometrica {
+	private String color;
 
-    public abstract void dibujar();
+	public Figura(String color) {
+		this.color = color;
+	}
+	
+	public abstract double calcularArea();
 
-    public String getTipoFigura() {
-        return tipoFigura;
-    }
-
-    public void setTipoFigura(String tipoFigura) {
-        this.tipoFigura = tipoFigura;
-    }
-
-        @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("FiguraGeometrica{");
-        sb.append("tipoFigura=").append(tipoFigura);
-        sb.append('}');
-        return sb.toString();
-    }
+	public String getColor() {
+		return color;
+	}		
 }
-    
 
